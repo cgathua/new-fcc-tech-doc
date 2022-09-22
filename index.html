@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Document Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header>FidelityFX Super Resolution 2.1</header>
+        <a class="nav-link" href="#Introduction">Introduction</a>
+        <a class="nav-link" href="#Quick_Start_Checklist">Quick start checklist</a>
+        <a class="nav-link" href="#Building_the_sample">Building the sample</a>
+        <a class="nav-link" href="#Limitations">Limitations</a>
+        <a class="nav-link" href="#Reference">Reference</a>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <article>
+             <p>FidelityFX Super Resolution 2 (or FSR2 for short), is a cutting-edge upscaling technique, developed from the ground up to produce high resolution frames, from lower resolution inputs.</p>
+             <p>FSR2 uses temporal feedback, to reconstruct high-resolution images, while maintaining and even improving image quality compared to native rendering.</p>
+             <p>FSR2 can enable “practical performance” for costly render operations, such as hardware ray tracing.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Quick_Start_Checklist">
+         <header>Quick start checklist</header>
+           <article>
+                <p>To use FSR2 you should follow the steps below:
+            
+                   <ol>
+                       <li>Double click <a href="https://github.com/GPUOpen-Effects/FidelityFX-FSR2/blob/master/build/GenerateSolutions.bat" target="_blank">Generatesolutions.bat</a> in the build directory.</li>
+                       <li>Open the solution matching your API, and build the solution.</li>
+                       <li>Copy the API library from<code>bin/ffx_fsr2_api</code> into the folder containing a folder in your project which contains third-party libraries.</li>
+                       <li>Copy the library matching the FSR2 backend you want to use, for DirectX12.</li>
+                       <li>Copy the following core API header files from src/ffx-fsr2-api into your project:
+                        <p><code>ffx_fsr2.h</code>, <code>ffx_types.h</code>, <code>ffx_error.h</code>, <code>ffx_fsr2_interface.h</code>,
+                           <code>ffx_util.h</code>, <code>shaders/ffx_fsr2_common.h</code> and <code>shaders/ffx_fsr2_resources.h</code>.
+                           Care should be taken to maintain the relative directory structure at the destination of the file copying.</li>
+                       </p>
+                       <li> Step 6-15 can be found at <a href="https://github.com/GPUOpen-Effects/FidelityFX-FSR2/blob/master/README.md#quick-start-checklist" target="_blank">gpu open</a></li>
+                   </ol>
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Building_the_sample">
+            <header>Building the sample</header>
+            <p><strong>Prerequisites</strong></p>
+            <article>
+                <p>
+                    <ol>
+                       <li>Install the following tools:</li> 
+                       <ul>
+                          <li>CMake 3.16</li>
+                          <li>Install the "Desktop Development with C++" workload</li>
+                          <li>Visual Studio 2019</li>
+                          <li>Windows 10 SDK 10.0.18362.0</li>
+                          <li>Git 2.32.0</li>
+                        </ul>
+                        <li>Generate the solutions:</li>
+                        <code><code>&gt; cd &lt;installation path&gt;\build
+                            &gt; GenerateSolutions.bat
+                        </code></code>
+                    </ol>
+                </p>  
+            </article>
+        </section>
+        <section class="main-section" id="Limitations">
+            <header>Limitations</header>
+            <article>
+              <p>FSR 2 requires a GPU with typed UAV load support.</p>
+            </article>
+        </section>
+        <section class="main-section" id="Reference">
+            <header>Reference</header>
+            <article>
+                <p>Copyright (c) 2022 Advanced Micro Devices, Inc. All rights reserved.</p>
+                <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction,
+                   including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so,
+                   subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+                </p>
+                <a href="https://github.com/GPUOpen-Effects/FidelityFX-FSR2/blob/master/README.md#fidelityfx-super-resolution-21-fsr-21" target="_blank">AMD</a>
+            </article>
+        </section>
+    </main>   
+</body>
+</html>
